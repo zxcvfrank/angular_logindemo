@@ -38,4 +38,8 @@ export class UsersService {
     this.loggedIn = false;
     this._authNavStatusSource.next(false);
   }
+
+  getData() {
+    return this.http.get('api/posts');
+  }
 }
